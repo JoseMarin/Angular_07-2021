@@ -1,0 +1,23 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
+
+<div>
+    <app-selectornumerico minimo="1" maximo="10" #selector1></app-selectornumerico>
+    <br>
+    <button (click)="fijarSelector1(1)">Fijar en 1</button><br>
+    <button (click)="fijarSelector1(5)">Fijar en 5</button><br>
+    <button (click)="fijarSelector1(10)">Fijar en 10</button>
+    <hr>
+    <app-selectornumerico minimo="1" maximo="10" #selector2></app-selectornumerico>
+    <br>
+    <button (click)="fijarSelector2(1)">Fijar en 1</button><br>
+    <button (click)="fijarSelector2(5)">Fijar en 5</button><br>
+    <button (click)="fijarSelector2(10)">Fijar en 10</button>
+</div>

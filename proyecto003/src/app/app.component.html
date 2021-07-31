@@ -1,0 +1,16 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<h1>Bienvenido al {{title}}</h1>
+<hr>
+<div>
+    <p>Ingrese nombre <input type="text" [(ngModel)]="nombre"></p>
+    <p>Ingrese apellido <input type="text" [(ngModel)]="apellido"></p>
+    <p>Nombre completo:{{nombre}},{{apellido}}</p>
+</div>
+<router-outlet></router-outlet>

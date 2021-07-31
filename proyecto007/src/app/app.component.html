@@ -1,0 +1,16 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
+
+<div style="text-align:center">
+    <h1>Prueba de la componente cronometro</h1>
+    <app-cronometro inicio="15" (multiplo10)="actualizar($event)"></app-cronometro>
+    <h2>Evento</h2>
+    <h3>{{mensaje}}</h3>
+</div>

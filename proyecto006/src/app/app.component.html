@@ -1,0 +1,28 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
+
+<div style="text-align:center">
+    <!-- Interpolación de variables -->
+    <h4>Interpolacion</h4>
+    <app-dado valor="{{valor1}}"></app-dado>
+    <app-dado valor="{{valor2}}"></app-dado>
+    <app-dado valor="{{valor3}}"></app-dado>
+    <hr>
+    <h4>Property binding</h4>
+    <!-- Property binding -->
+    <app-dado [valor]="valor1"></app-dado>
+    <app-dado [valor]="valor2"></app-dado>
+    <app-dado [valor]="valor3"></app-dado>
+
+    <hr>
+    <button (click)="tirar()">Tirar</button>
+    <hr>
+    <p>Resultado:{{resultado}}</p>
+</div>

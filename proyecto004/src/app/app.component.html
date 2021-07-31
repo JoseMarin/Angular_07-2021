@@ -1,0 +1,47 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<h1>Bienvenidos al {{title}}</h1>
+<hr>
+<div>
+    <h1>Administración de artículos</h1>
+    <table border="1" *ngIf="hayRegistros(); else sinarticulos">
+        <tr>
+            <td>Codigo</td>
+            <td>Descripcion</td>
+            <td>Precio</td>
+            <td>Borrar</td>
+            <td>Seleccionar</td>
+        </tr>
+        <tr *ngFor="let art of articulos">
+            <td>{{art.codigo}}</td>
+            <td>{{art.descripcion}}</td>
+            <td>{{art.precio}}</td>
+            <td><button (click)="borrar(art)">Borrar?</button></td>
+            <td><button (click)="seleccionar(art)">Seleccionar</button></td>
+        </tr>
+    </table>
+    <ng-template #sinarticulos>
+        <p>No hay articulos.</p>
+    </ng-template>
+    <div>
+        <p>
+            Codigo:<input type="number" [(ngModel)]="art.codigo" />
+        </p>
+        <p>
+            descripcion:<input type="text" [(ngModel)]="art.descripcion" />
+        </p>
+        <p>
+            precio:<input type="number" [(ngModel)]="art.precio" />
+        </p>
+        <p><button (click)="agregar()">Agregar</button>
+            <button (click)="modificar()">Modificar</button></p>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

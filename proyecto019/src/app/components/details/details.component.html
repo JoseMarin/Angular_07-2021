@@ -1,0 +1,19 @@
+<div style="width: 500px; margin: auto;">
+    <div *ngIf="currentBook" class="edit-form">
+        <h4>Book</h4>
+        <form>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" [(ngModel)]="currentBook.title" name="title" />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="currentBook.description" name="description" />
+            </div>
+        </form>
+        <button type="button" class="btn btn-danger" (click)="updateBook()">Update</button>
+        <button type="button" class="btn btn-warning" (click)="deleteBook()">Delete</button>
+    </div>
+    <br>
+    <h3>{{message}}</h3>
+</div>

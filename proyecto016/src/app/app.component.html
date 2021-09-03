@@ -1,0 +1,14 @@
+<p>Nombre del cliente:{{ nombre }}</p>
+<p>Nombre del cliente en mayúsculas:{{ nombre | uppercase }}</p>
+<p>Nombre del cliente en minúsculas:{{ nombre | lowercase }}</p>
+<p>El saldo es:{{ saldo | currency:'$'}}</p>
+<p>Días laborables: {{ dias | slice:1:6}}</p>
+<p>Fecha actual:{{ fechaActual | date:'d/M/y' }}</p>
+<!-- Objetos Json -->
+<p>{{ articulos }}</p>
+<p>{{ articulos | json }}</p>
+<p>{{ articulos[0] | json }}</p>
+<p>{{ articulos[0].descripcion| json }}</p>
+
+
+<router-outlet></router-outlet>

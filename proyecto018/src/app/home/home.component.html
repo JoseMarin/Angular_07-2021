@@ -1,0 +1,21 @@
+<p>home works!</p>
+
+<div style="padding: 13px;">
+    <h1 *ngIf="products.length === 0">No hay registros</h1>
+
+    <div *ngFor="let product of products" style="margin-top:11px;">
+        <p>{{product.name}}</p>
+        <p>{{product.price}} $/ {{product.quantity}}</p>
+        <p>{{product.description}}</p>
+        <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
+    </div>
+
+    <button> Buy product</button>
+</div>
+
+<div>
+    <button (click)="firstPage()"> First</button>
+    <button (click)="previousPage()"> Previous</button>
+    <button (click)="nextPage()"> Next</button>
+    <button (click)="lastPage()"> Last</button>
+</div>

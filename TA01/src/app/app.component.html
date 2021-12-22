@@ -1,0 +1,52 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="container">
+  <h2>Alta Cliente</h2>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input type="text" class="form-control" [(ngModel)]="cli.nombre">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">CIF</label>
+      <input type="text" class="form-control" [(ngModel)]="cli.cif">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Direccion</label>
+      <input type="text" class="form-control" [(ngModel)]="cli.direccion">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="agregar()">Agregar</button>
+
+</div>
+
+<hr>
+
+<div class="container">
+  <h2>Lista de Clientes</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">CIF</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Grupo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cli of clientes">
+        <td>{{cli.nombre}}</td>
+        <td>{{cli.cif}}</td>
+        <td>{{cli.direccion}}</td>
+        <td>{{cli.grupo}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

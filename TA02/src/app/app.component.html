@@ -1,0 +1,31 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+<div class="container">
+  <h2>Alta Cliente</h2>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input type="text" class="form-control" [(ngModel)]="cli.nombre">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">CIF</label>
+      <input type="text" class="form-control" [(ngModel)]="cli.cif">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Direccion</label>
+      <input type="text" class="form-control" [(ngModel)]="cli.direccion">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="agregar()">Agregar</button>
+
+</div>
+
+
+<app-clientes [clientes]="clientes"></app-clientes>

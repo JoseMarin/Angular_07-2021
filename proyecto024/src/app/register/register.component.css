@@ -1,0 +1,8 @@
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 200px;
+  padding: 10px;
+  background-color: rgb(173, 241, 241);
+}

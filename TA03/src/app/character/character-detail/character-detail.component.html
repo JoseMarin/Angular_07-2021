@@ -1,0 +1,25 @@
+<p>Character-detail works!</p>
+
+  <div class="card mb-3" style="max-width: 940px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{characters.image}}" class="card-img-top" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{characters.name}}</h5>
+          <p class="card-text">
+            Status: {{characters.status}}<br>
+            Species: {{characters.species}}<br>
+            gender: {{characters.gender}}<br>
+            Origin: {{characters.origin.name}}<br>
+            Location: {{characters.location.name}}<br>
+            Id Code: {{characters.id}}
+          </p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <p>{{characters| json }}</p> -->

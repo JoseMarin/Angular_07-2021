@@ -1,0 +1,34 @@
+<p>Character-detail works!</p>
+
+  <div *ngIf="characters" class="card mb-3" style="max-width: 940px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{characters.image}}" class="card-img-top" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{characters.name}}</h5>
+          <p class="card-text">
+            Status: {{characters.status}}<br>
+            Species: {{characters.species}}<br>
+            gender: {{characters.gender}}<br>
+            Origin: {{characters.origin}}<br>
+            Location: {{characters.location}}<br>
+            Id Code: {{characters.id}}
+          </p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <button class="btn btn-warning mr-2" (click)="deleteCharacter()">
+            Delete
+          </button>
+          <button class="btn btn-light mr-2" *ngIf="characters.status == 'Alive'" (click)="updateStatus('Dead')">
+            Dead
+          </button>
+          <button *ngIf="characters.status == 'Dead'" class="btn btn-light mr-2" (click)="updateStatus('Alive')">
+            Alive
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <p>{{characters| json }}</p> -->

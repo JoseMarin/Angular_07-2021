@@ -1,0 +1,25 @@
+
+<div class="login">
+  <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="mb-3">
+          <h4>Login</h4>
+        </div>
+        <div class="mb-3">
+          <label for="identifier" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="123456" required [(ngModel)]="login.username" name="username">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Password</label>
+          <input type="text" class="form-control" id="password" placeholder="Rick..." required [(ngModel)]="login.password" name="password">
+        </div>
+
+          <button (click)="logUser()" class="btn btn-success">Submit</button>
+      </div>
+
+      <div *ngIf="submitted">
+        <h4>Bienvenido {{login.username}}</h4>
+        <button class="btn btn-success" routerLink="/home">Continuar</button>
+    </div>
+  </div>
+</div>

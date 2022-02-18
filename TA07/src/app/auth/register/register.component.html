@@ -1,0 +1,27 @@
+
+<div class="register">
+
+  <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="mb-3">
+          <h4>Register</h4>
+        </div>
+        <div class="mb-3">
+          <label for="identifier" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="123456" required [(ngModel)]="user.username" name="username">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Password</label>
+          <input type="text" class="form-control" id="password" placeholder="Rick..." required [(ngModel)]="user.password" name="password">
+        </div>
+
+          <button (click)="newUser()" class="btn btn-success">Submit</button>
+      </div>
+
+      <div *ngIf="submitted">
+        <h4>User was submitted successfully!</h4>
+        <button class="btn btn-success" routerLink="/login">Add</button>
+    </div>
+  </div>
+</div>
+

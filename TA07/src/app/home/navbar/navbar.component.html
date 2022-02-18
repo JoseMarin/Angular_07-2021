@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a routerLink="home" class="navbar-brand">Home</a>
+  <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a *ngIf="user!=undefined" routerLink="add" class="nav-link">{{role}}</a>
+      </li>
+  </div>
+  <div class="navbar-nav ms-auto user">
+      <li class="nav-item">
+          <a *ngIf="user!=undefined" class="nav-link">{{user.username}}</a>
+      </li>
+      <li class="nav-item">
+          <a *ngIf="user!=undefined" (click)="logout()" class="nav-link">{{log}}</a>
+      </li>
+  </div>
+</nav>

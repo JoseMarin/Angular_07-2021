@@ -1,0 +1,26 @@
+
+<div>
+  <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="mb-3">
+          <label for="identifier" class="form-label">Identifier</label>
+          <input type="number" class="form-control" id="id" placeholder="123456" required [(ngModel)]="character.id" name="id">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Rick..." required [(ngModel)]="character.name" name="name">
+        </div>
+
+          <button (click)="saveCharacter()" class="btn btn-success">Submit</button>
+      </div>
+
+      <div *ngIf="submitted">
+        <h4>Character was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newCharacter()">Add</button>
+    </div>
+
+  </div>
+</div>
+
+
+

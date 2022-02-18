@@ -1,0 +1,14 @@
+
+
+<div *ngIf="characters" class="card">
+  <img src="{{characters.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>{{characters.name}}</h5>
+    <p class="card-text">
+    Status: {{characters.status}}<br>
+    Species: {{characters.species}}<br>
+    Id: {{characters.id}}</p>
+  </div>
+  <a [routerLink] = "['/characters', characters.id]" class="btn btn-primary ver-mas">Ver más</a>
+</div>
+

@@ -1,0 +1,10 @@
+
+<article>
+  <img *ngIf="cardItem" [src]="cardItem.image" alt="Sample photo">
+  <div *ngIf="cardItem" class="text">
+    <h3>{{cardItem.title}}</h3>
+    <p>{{cardItem.description}}</p>
+    <a href="https://codepen.io/collection/XdWJOQ/" class="btn btn-primary btn-block">Stop here</a>
+  </div>
+</article>
+
